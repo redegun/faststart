@@ -95,15 +95,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-@font-face {
-  font-family: 'Roboto Regular';
-  src: url('../../fonts/RobotoRegular/RobotoRegular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto Bold';
-  src: url('../../fonts/RobotoBold/RobotoBold.ttf') format('truetype');
-}
-h1 {
-  font-family: 'Roboto Bold';
-  font-size: 50px;
-}
