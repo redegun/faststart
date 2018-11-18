@@ -1,10 +1,17 @@
 const gulp = require('gulp');
 const less = require('gulp-less');
 const browserSync = require('browser-sync') .create();
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS     = require('gulp-clean-css')
 
 gulp.task('less', function() {
   return gulp.src('app/less/**/*.less')
   .pipe(less())
+  .pipe(autoprefixer({
+    browsers: ['last 12 versions'],
+    cascade: false
+}))
+  .pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
